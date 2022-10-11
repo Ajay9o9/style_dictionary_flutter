@@ -1,0 +1,44 @@
+{
+  "source": ["tokens/*.json"],
+  "platforms": {
+    "flutter": {
+      "transforms": ["attribute/cti", "name/cti/camel", "color/hex8flutter", "size/flutter/remToDouble", "content/flutter/literal", "asset/flutter/literal", "font/flutter/literal", "colors/hex8flutter"],
+      "buildPath": "lib/unique_file/",
+      "files": [
+          {
+              "destination": "style_dictionary.dart",
+              "format": "flutter/class.dart",
+              "className": "StyleDictionary"
+          }
+      ]
+  },
+  "flutter-separate": {
+    "transforms": ["attribute/cti", "name/ti/camel", "color/hex8flutter", "size/flutter/remToDouble", "content/flutter/literal", "asset/flutter/literal", "font/flutter/literal", "colors/hex8flutter"],
+    "buildPath": "lib/unique_file/",
+    "files": [
+        {
+            "destination": "style_dictionary_color.dart",
+            "format": "flutter/class.dart",
+            "className": "StyleDictionaryColor",
+            "type": "color",
+            "filter": {
+                "attributes": {
+                    "category": "color"
+                }
+            }
+        },
+        {
+            "destination": "style_dictionary_sizes.dart",
+            "format": "flutter/class.dart",
+            "className": "StyleDictionarySize",
+            "type": "float",
+            "filter": {
+                "attributes": {
+                    "category": "size"
+                }
+            }
+        }
+    ]
+}
+  }
+}
