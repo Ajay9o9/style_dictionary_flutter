@@ -1,10 +1,10 @@
 
 //
-// style_dictionary_color.dart
+// light_colors.g.dart
 //
 
 // Do not edit directly
-// Generated on Tue, 11 Oct 2022 09:45:44 GMT
+// Generated on Wed, 12 Oct 2022 09:24:49 GMT
 
 
 
@@ -52,13 +52,6 @@ class StyleDictionaryColor {
     static const backgroundWarningWeak = Color(0xFFFDE6CC);
     static const backgroundWidgetBackground = Color(0x0D000000);
     static const backgroundWidgetForeground = Color(0x0D000000);
-    static const black10 = Color(0x1A1B1C21);
-    static const black100 = Color(0xFF1B1C21);
-    static const black20 = Color(0x331B1C21);
-    static const black30 = Color(0x4D1B1C21);
-    static const black5 = Color(0x0D1B1C21);
-    static const black50 = Color(0x801B1C21);
-    static const black70 = Color(0xB31B1C21);
     static const brandSharePrimary = Color(0xFFB5064D);
     static const contentDeactivated = Color(0xFFDBDBDC);
     static const contentError = Color(0xFFFA4F4F);
@@ -74,11 +67,4 @@ class StyleDictionaryColor {
     static const contentWarning = Color(0xFFF58400);
     static const lineSeperatorStrong = Color(0x1A000000);
     static const lineSeperatorWeak = Color(0x0D000000);
-    static const white10 = Color(0x1AFFFFFF);
-    static const white100 = Color(0xFFFFFFFF);
-    static const white20 = Color(0x33FFFFFF);
-    static const white30 = Color(0x4DFFFFFF);
-    static const white5 = Color(0x0DFFFFFF);
-    static const white50 = Color(0x80FFFFFF);
-    static const white70 = Color(0xB3FFFFFF);
 }

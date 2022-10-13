@@ -1,0 +1,38 @@
+{
+  "source": ["tokens/font.json"],
+  "platforms": {
+    "flutter": {
+      "transforms": ["attribute/cti", "name/cti/camel", "color/hex8flutter", "size/flutter/remToDouble", "content/flutter/literal", "asset/flutter/literal", "font/flutter/literal", "colors/hex8flutter","test/gradient", "test/fonts","test/typography"],
+      "buildPath": "lib/unique_file/",
+      "files": [
+          {
+              "destination": "style_dictionary.dart",
+              "format": "flutter/class.dart",
+              "className": "StyleDictionary"
+          }
+      ],
+      "options": {
+        "outputReferences": true
+      }
+  },
+  "flutter-separate": {
+    "transforms": ["attribute/cti", "name/ti/camel", "color/hex8flutter", "size/flutter/remToDouble", "content/flutter/literal", "asset/flutter/literal", "font/flutter/literal", "colors/hex8flutter","test/fonts","test/gradient"],
+    "buildPath": "lib/unique_file/",
+    "files": [
+
+      
+        {
+            "destination": "fonts.g.dart",
+            "format": "flutter/class.dart",
+            "className": "StyleDictionaryFont",
+            "type": "font",
+            "filter": {
+                "attributes": {
+                    "category": "font"
+                }
+            }
+        }
+    ]
+}
+  }
+}
