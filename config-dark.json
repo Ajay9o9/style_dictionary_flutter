@@ -1,58 +1,20 @@
 {
-  "source": ["tokens/dark-theme.json"],
-  "platforms": {
-    "flutter": {
-      "transforms": ["attribute/cti", "name/cti/camel", "color/hex8flutter", "size/flutter/remToDouble", "content/flutter/literal", "asset/flutter/literal", "font/flutter/literal", "colors/hex8flutter","test/gradient", "test/fonts","test/typography"],
-      "buildPath": "lib/unique_file/",
-      "files": [
-          {
-              "destination": "style_dictionary.dart",
+    "source": ["tokens/dark-theme.json"],
+    "platforms": {
+      "flutter": {
+        "transforms": ["attribute/cti", "name/cti/camel", "size/flutter/remToDouble", "content/flutter/literal", "asset/flutter/literal", "font/flutter/literal", "app/gradient","color/hex8flutter", "app/colors"],
+        "buildPath": "lib/generated/styles/",
+        "files": [
+            {
+              "destination": "dark_theme.g.dart",
               "format": "flutter/class.dart",
-              "className": "StyleDictionary"
+              "className": "AppDarkTheme"
           }
-      ],
-      "options": {
-        "outputReferences": true
-      }
-  },
-  "flutter-separate": {
-    "transforms": ["attribute/cti", "name/ti/camel", "color/hex8flutter", "size/flutter/remToDouble", "content/flutter/literal", "asset/flutter/literal", "font/flutter/literal", "colors/hex8flutter","test/fonts","test/gradient"],
-    "buildPath": "lib/unique_file/",
-    "files": [
-        {
-            "destination": "dark_colors.g.dart",
-            "format": "flutter/class.dart",
-            "className": "StyleDictionaryColor",
-            "type": "color",
-            "filter": {
-                "attributes": {
-                    "category": "color"
-                }
-            }
-        },
-        {
-            "destination": "dark.g.dart",
-            "format": "flutter/class.dart",
-            "className": "StyleDictionarySize",
-            "type": "float",
-            "filter": {
-                "attributes": {
-                    "category": "size"
-                }
-            }
-        },
-        {
-            "destination": "fonts.g.dart",
-            "format": "flutter/class.dart",
-            "className": "StyleDictionaryFont",
-            "type": "font",
-            "filter": {
-                "attributes": {
-                    "category": "font"
-                }
-            }
+        ],
+        "options": {
+          "outputReferences": true
         }
-    ]
-}
+    }
+    }
   }
-}
+  

@@ -15,12 +15,6 @@
           "paragraphIndent": 0,
           "paragraphSpacing": 0,
           "textCase": "none"
-        },
-        "extensions": {
-          "org.lukasoppermann.figmaDesignTokens": {
-            "styleId": "S:afd22d4afe6b62041fb710c50c546d275936f3a9,",
-            "exportKey": "font"
-          }
         }
       }
     },
@@ -39,12 +33,6 @@
           "paragraphIndent": 0,
           "paragraphSpacing": 0,
           "textCase": "none"
-        },
-        "extensions": {
-          "org.lukasoppermann.figmaDesignTokens": {
-            "styleId": "S:4a04b6f0804971c1d42de3b8f4e13c3fcb3f8938,",
-            "exportKey": "font"
-          }
         }
       },
       "h4": {
@@ -61,12 +49,6 @@
           "paragraphIndent": 0,
           "paragraphSpacing": 0,
           "textCase": "none"
-        },
-        "extensions": {
-          "org.lukasoppermann.figmaDesignTokens": {
-            "styleId": "S:5f9b2c90ee7b52e8ae4aa69055a7d4dbea655dd6,",
-            "exportKey": "font"
-          }
         }
       }
     },
@@ -85,12 +67,6 @@
           "paragraphIndent": 0,
           "paragraphSpacing": 0,
           "textCase": "none"
-        },
-        "extensions": {
-          "org.lukasoppermann.figmaDesignTokens": {
-            "styleId": "S:b0166ef3e6b1489f66911069707a8a6ba60398b6,",
-            "exportKey": "font"
-          }
         }
       },
       "m6": {
@@ -107,12 +83,6 @@
           "paragraphIndent": 0,
           "paragraphSpacing": 0,
           "textCase": "none"
-        },
-        "extensions": {
-          "org.lukasoppermann.figmaDesignTokens": {
-            "styleId": "S:717019cbb3a724f06c5bc7b52459973e7163cf84,",
-            "exportKey": "font"
-          }
         }
       },
       "d2": {
@@ -129,12 +99,6 @@
           "paragraphIndent": 0,
           "paragraphSpacing": 0,
           "textCase": "none"
-        },
-        "extensions": {
-          "org.lukasoppermann.figmaDesignTokens": {
-            "styleId": "S:98f78a1beec1341abde9201ba71d0eb7c685f80d,",
-            "exportKey": "font"
-          }
         }
       }
     },
@@ -153,12 +117,6 @@
           "paragraphIndent": 0,
           "paragraphSpacing": 0,
           "textCase": "none"
-        },
-        "extensions": {
-          "org.lukasoppermann.figmaDesignTokens": {
-            "styleId": "S:8b2e243edddc096cb9298107997cfa674140ea53,",
-            "exportKey": "font"
-          }
         }
       },
       "d3": {
@@ -175,148 +133,6 @@
           "paragraphIndent": 0,
           "paragraphSpacing": 0,
           "textCase": "none"
-        },
-        "extensions": {
-          "org.lukasoppermann.figmaDesignTokens": {
-            "styleId": "S:0803f621b4c3473efc83f002f05debdfd463ff8a,",
-            "exportKey": "font"
-          }
-        }
-      }
-    },
-    "xsmall": {
-      "h9": {
-        "type": "custom-fontStyle",
-        "value": {
-          "fontSize": 12,
-          "textDecoration": "none",
-          "fontFamily": "Proxima Nova",
-          "fontWeight": 600,
-          "fontStyle": "normal",
-          "fontStretch": "normal",
-          "letterSpacing": -0.1,
-          "lineHeight": 15,
-          "paragraphIndent": 0,
-          "paragraphSpacing": 0,
-          "textCase": "none"
-        },
-        "extensions": {
-          "org.lukasoppermann.figmaDesignTokens": {
-            "styleId": "S:2fd717f6f15a9c631fa4ad808231dec5f996ae6e,",
-            "exportKey": "font"
-          }
-        }
-      },
-      "h8": {
-        "type": "custom-fontStyle",
-        "value": {
-          "fontSize": 12,
-          "textDecoration": "none",
-          "fontFamily": "Proxima Nova",
-          "fontWeight": 700,
-          "fontStyle": "normal",
-          "fontStretch": "normal",
-          "letterSpacing": -0.1,
-          "lineHeight": 15,
-          "paragraphIndent": 0,
-          "paragraphSpacing": 0,
-          "textCase": "none"
-        },
-        "extensions": {
-          "org.lukasoppermann.figmaDesignTokens": {
-            "styleId": "S:014d6476b137ee5d96bec027450b6884638dbc5f,",
-            "exportKey": "font"
-          }
-        }
-      }
-    },
-    "misc": {
-      "h0": {
-        "type": "custom-fontStyle",
-        "value": {
-          "fontSize": 56,
-          "textDecoration": "none",
-          "fontFamily": "Proxima Nova",
-          "fontWeight": 600,
-          "fontStyle": "normal",
-          "fontStretch": "normal",
-          "letterSpacing": -1,
-          "lineHeight": 72,
-          "paragraphIndent": 0,
-          "paragraphSpacing": 0,
-          "textCase": "none"
-        },
-        "extensions": {
-          "org.lukasoppermann.figmaDesignTokens": {
-            "styleId": "S:fbe5db69ff9a4b935fe25ec7ba5e12501f3eacfe,",
-            "exportKey": "font"
-          }
-        }
-      },
-      "h2": {
-        "type": "custom-fontStyle",
-        "value": {
-          "fontSize": 32,
-          "textDecoration": "none",
-          "fontFamily": "Proxima Nova",
-          "fontWeight": 600,
-          "fontStyle": "normal",
-          "fontStretch": "normal",
-          "letterSpacing": 0.2,
-          "lineHeight": 36,
-          "paragraphIndent": 0,
-          "paragraphSpacing": 0,
-          "textCase": "none"
-        },
-        "extensions": {
-          "org.lukasoppermann.figmaDesignTokens": {
-            "styleId": "S:4a845cb37a2c4214d45f0d3ed14376abfa8cf5cb,",
-            "exportKey": "font"
-          }
-        }
-      },
-      "h3": {
-        "type": "custom-fontStyle",
-        "value": {
-          "fontSize": 32,
-          "textDecoration": "none",
-          "fontFamily": "Proxima Nova",
-          "fontWeight": 400,
-          "fontStyle": "normal",
-          "fontStretch": "normal",
-          "letterSpacing": 0.4,
-          "lineHeight": 44,
-          "paragraphIndent": 0,
-          "paragraphSpacing": 0,
-          "textCase": "none"
-        },
-        "extensions": {
-          "org.lukasoppermann.figmaDesignTokens": {
-            "styleId": "S:babe71d6454d13fbbc4ddcb58a1f5e4bcfd76ff8,",
-            "exportKey": "font"
-          }
-        }
-      },
-      "h5": {
-        "type": "custom-fontStyle",
-        "value": {
-          "fontSize": 20,
-          "textDecoration": "none",
-          "fontFamily": "Proxima Nova",
-          "fontWeight": 700,
-          "fontStyle": "normal",
-          "fontStretch": "normal",
-          "letterSpacing": 0.1,
-          "lineHeight": 28,
-          "paragraphIndent": 0,
-          "paragraphSpacing": 0,
-          "textCase": "none"
-        },
-        "extensions": {
-          "org.lukasoppermann.figmaDesignTokens": {
-            "styleId": "S:1fda1700b3ff7801aef4314f321106f676cbd1a2,",
-            "exportKey": "font"
-          }
         }
       }
     }

@@ -2,11 +2,20 @@ const StyleDictionary = require('style-dictionary')
 const baseConfigLight = require('./config-light.json')
 const baseConfigDark = require('./config-dark.json')
 const baseConfigFonts = require('./config-fonts.json')
-const baseConfigGlobal = require('./config-global.json')
+
 const Color = require('tinycolor2')
 
+const formats = require('./src/formats');
+
+console.log("------starting build------");
+
+function degreesToRadiant(deg) {
+    return (deg * Math.PI) / 180.0;
+}
+
+
 StyleDictionary.registerTransform({
-    name: 'colors/hex8flutter',
+    name: 'app/colors',
     type: 'value',
     matcher: prop => {
         return prop.attributes.category === 'colors'
@@ -19,32 +28,22 @@ StyleDictionary.registerTransform({
 
 
 StyleDictionary.registerTransform({
-    name: 'test/gradient',
+    name: 'app/gradient',
     type: 'value',
     matcher: prop => {
         return prop.attributes.category === 'gradient'
     },
     transformer: prop => {
 
-        var object = prop.value
-        console.log(object); 
-        object.stops
+        console.log("inside gradient transform");
 
-        //"rotation": 360,
-        // "stops": [
-        //     {
-        //       "position": 0,
-        //       "color": "#000000ff"
-        //     },
-        //     {
-        //       "position": 1,
-        //       "color": "#00000000"
-        //     }
-        //   ]
+        var object = prop.value
         var stops = []
         var colors = []
 
         var rotation = object.rotation;
+
+        const radiant = degreesToRadiant(rotation);
 
         for (var i = 0; i < object.stops.length; i++) {
             var stop = object.stops[i];
@@ -56,36 +55,28 @@ StyleDictionary.registerTransform({
         }
 
 
-        const ss = `
+        const obj = `
         LinearGradient(
             begin: Alignment.bottomRight, 
-            transform: GradientRotation(math.pi / ${rotation}),
+            transform: GradientRotation(${radiant}),
             stops: [${stops}],
              colors: [${colors}]
         )`;
 
-        return ss;
+        return obj;
     },
-})
+});
 
 
 StyleDictionary.registerTransform({
-    name: 'test/fonts',
+    name: 'app/fonts',
     type: 'value',
     matcher: prop => {
         return prop.attributes.category === 'font'
     },
     transformer: prop => {
-        // console.log(prop.attributes);
-
-        // console.log(prop.original.value);
-        
+    
         var object = prop.original.value;
-        // console.log(prop.value.fontWeight); 
-        // var sss = JSON.parse(object);
-        // console.log(JSON.stringify(object)); 
-
-       
        
         var fontsize = object.fontsize;
         var fontweight = object.fontWeight;
@@ -95,8 +86,9 @@ StyleDictionary.registerTransform({
         var lineHeight = object.lineHeight;
         var paragraphIndent = object.paragraphIndent;
         var paragraphSpacing = object.paragraphSpacing;
+        
 
-        const ss = `
+        const textStyle = `
         TextStyle(
             fontWeight: FontWeight.w${fontweight},
             fontStyle: FontStyle.${fontStyle},
@@ -107,74 +99,31 @@ StyleDictionary.registerTransform({
             )
         `;
 
-        return ss;
+        return textStyle;
     },
-})
+});
 
 
-StyleDictionary.registerTransform({
-    name: 'test/typography',
-    type: 'value',
-    matcher: prop => {
-
-        if(prop.attributes.category === 'typography'){
-            console.log(prop.attributes);
-            console.log(prop.attributes.item);
-            console.log(prop.value);
-        }
-        return prop.attributes.category === 'typography'
-    },
-    transformer: prop => {
-        return prop.value;
-        // console.log(prop.attributes);
-
-        console.log(prop.original.value);
-
-
-        
-        var object = prop.original.value;
-        // // console.log(prop.value.fontWeight); 
-        // // var sss = JSON.parse(object);
-        // // console.log(JSON.stringify(object)); 
-
-       
-       
-        var fontsize = object.fontsize;
-        var fontweight = object.fontWeight;
-        var fontfamily = object.fontFamily;
-        var fontStyle = object.fontStyle;
-        var letterSpacing = object.letterSpacing;
-        var lineHeight = object.lineHeight;
-        var paragraphIndent = object.paragraphIndent;
-        var paragraphSpacing = object.paragraphSpacing;
-
-        const ss = `
-        TextStyle(
-            fontWeight: FontWeight.w${fontweight},
-            fontStyle: FontStyle.${fontStyle},
-            fontFamily: '${fontfamily}',
-            fontSize: 40,
-            letterSpacing: ${letterSpacing},
-            height: ${lineHeight},
-            )
-        `;
-
-        return ss;
-    },
-})
-
-
+for (const key in formats) {
+    
+    const formatter = formats[key];
+    StyleDictionary.registerFormat({
+        name: key,
+        formatter: formatter,
+    });
+}
 
 const StyleDictionaryExtendedLight = StyleDictionary.extend(baseConfigLight)
 
 const StyleDictionaryExtendedDark = StyleDictionary.extend(baseConfigDark)
 const StyleDictionaryExtendedFonts = StyleDictionary.extend(baseConfigFonts)
-const StyleDictionaryExtendedGlobal = StyleDictionary.extend(baseConfigGlobal)
 
 StyleDictionaryExtendedLight.buildAllPlatforms()
 StyleDictionaryExtendedDark.buildAllPlatforms()
 StyleDictionaryExtendedFonts.buildAllPlatforms()
-StyleDictionaryExtendedGlobal.buildAllPlatforms()
+
+
+console.log("------finished build------");
 
 
 

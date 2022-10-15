@@ -1,0 +1,7 @@
+name: custom_style_dictionary_flutter
+description: Custom style dictionary created for generating flutter code from design token
+version: 0.0.1
+repository: https://github.com/Ajay9o9/style_dictionary_flutter
+publish_to:
+environment:
+  sdk: '>=2.17.6 <3.0.0'
